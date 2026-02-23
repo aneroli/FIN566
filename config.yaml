@@ -1,0 +1,520 @@
+exercise_title: "Maple Creek Mixed-Use Center"
+exercise_subtitle: "Dynamic Valuation Exercise"
+max_rounds: 6
+
+true_values:
+  0: 8641000
+  1: 9245000
+  2: 7972000
+  3: 5794000
+  4: 1850000
+  5: 8014000
+  6: 4567000
+
+groups:
+  - id: "group1"
+    name: "Team Alpha"
+    emoji: "🦅"
+  - id: "group2"
+    name: "Team Beta"
+    emoji: "🐺"
+  - id: "group3"
+    name: "Team Gamma"
+    emoji: "🦁"
+  - id: "group4"
+    name: "Team Delta"
+    emoji: "🦊"
+  - id: "group5"
+    name: "Team Epsilon"
+    emoji: "🐻"
+  - id: "group6"
+    name: "Team Zeta"
+    emoji: "🦈"
+  - id: "group7"
+    name: "Team Eta"
+    emoji: "🦉"
+  - id: "group8"
+    name: "Team Theta"
+    emoji: "🐆"
+
+initial_scenario: |
+  THE PROPERTY — Maple Creek Mixed-Use Center
+
+  You are a junior analyst at a commercial real estate
+  investment firm. Your team is evaluating the acquisition
+  of Maple Creek Mixed-Use Center, a neighborhood property
+  combining retail and residential uses in a mid-sized
+  suburban market.
+
+  PROPERTY COMPOSITION
+  • Ground-floor retail: 18,000 SF GLA (two tenants)
+  • Upper level: 20 apartment units
+
+  RETAIL TENANTS
+  Tenant              Space SF  Rent/SF  Escal.   Term    % Rent
+  ---------------------------------------------------------------
+  GreenMart (Anchor)  15,000   $20.00   3.0%/yr  5 yrs   2% > $10M
+  Brew & Bean Coffee   3,000   $28.00   2.5%/yr  5 yrs   None
+
+  RESIDENTIAL COMPONENT
+  • 20 units at $1,500/month per unit
+  • Rent growth: 3.0% annually
+  • Apartment vacancy: 5.0%
+
+  KEY LEASE PROVISIONS
+  • Percentage Rent (GreenMart): 2% of gross sales above
+    $10,000,000 breakpoint. Current sales: $9M/yr growing
+    at 3%. No percentage rent currently owed.
+  • Co-Tenancy (Brew & Bean): Rent reduced 50% if EITHER:
+    (a) GreenMart ceases to operate, OR
+    (b) apartment occupancy falls below 80%.
+    Currently NOT active.
+
+  OPERATING & VALUATION ASSUMPTIONS
+  Assumption                         Year 1     Growth
+  ---------------------------------------------------------------
+  Credit Loss (% of Gross Income)    2.0%       —
+  Ancillary Income (parking, etc.)   $12,000    2.0%
+  Total Operating Expenses           $95,000    2.5%
+  Management Fee (% Rental Inc.)     5.0%       —
+  Required Rate of Return            9.0%       —
+  Exit Cap Rate                      7.0%       —
+
+  VALUATION METHOD — Discounted Cash Flow (DCF)
+  Property Value = PV of NOI (Years 1–5)
+                 + PV of Terminal Value
+  Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+  This assumes NOI is stabilized at Year 5 with NO
+  further growth beyond the hold period.
+  Discount all cash flows at the Required Rate of Return.
+
+  YOUR TASK (BASE CASE)
+  Build a 5-year operating pro forma. Then compute the
+  DCF valuation by discounting the NOI and terminal
+  value at the required return.
+
+  Expected Year 1 NOI: ≈ $592,000
+  Property Value (DCF): ≈ $8,641,000
+
+initial_questions:
+  - "What is the Year 1 NOI? What proportion comes from retail vs. residential income?"
+  - "What is the indicated property value using DCF? How much of the value comes from the terminal value vs. operating cash flows?"
+  - "How does NOI trend over the 5-year hold? What drives the growth?"
+  - "What advantages and risks does a mixed-use property offer compared to pure retail or pure residential?"
+
+rounds:
+  round1:
+    title: "📈 Percentage Rents Kick In"
+    subtitle: "Round 1 — Market Update"
+    description: "The local economy is booming."
+    info: |
+      MARKET UPDATE — Round 1: Percentage Rents Kick In
+
+      The local economy is booming. GreenMart reports
+      significantly higher sales:
+
+      • Year 1 gross sales revised to $11,000,000 (from $9M)
+      • Sales growth revised to 4.0% (from 3%)
+      • All other assumptions unchanged
+
+      Reminder: Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+      (no NOI growth assumed beyond Year 5).
+    questions:
+      - "How much percentage rent does GreenMart owe in Year 1? How does it grow over 5 years?"
+      - "What is the new Year 1 NOI and DCF property value? Calculate the change from the Base Case ($ and %)."
+      - "Why is percentage rent valuable to a landlord? What are the risks if it becomes a large share of income?"
+      - "Would you prefer higher base rent with no percentage rent, or lower base rent with generous overage provisions?"
+
+  round2:
+    title: "🏗️ A New Competitor Arrives"
+    subtitle: "Round 2 — Market Update"
+    description: "A competing retail center is announced nearby."
+    info: |
+      MARKET UPDATE — Round 2: A New Competitor Arrives
+
+      A developer announces a 50,000 SF retail center one
+      mile away with a competing grocery chain.
+
+      • GreenMart sales revised to $8,500,000, growth 1.0%
+      • Apartment vacancy rises to 10.0%
+        (occupancy 90%, still above 80% co-tenancy threshold)
+      • Exit cap rate widens to 7.5%
+      • Required rate of return: 9.0% (unchanged)
+      • All other assumptions unchanged from Round 1
+
+      Reminder: Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+      (no NOI growth assumed beyond Year 5).
+    questions:
+      - "What happens to percentage rents?"
+      - "Calculate the new NOI and DCF value. What is the change from Round 1 ($ and %)?"
+      - "The exit cap rate moved only 50 bps (7.0% → 7.5%), yet value fell significantly. Explain why."
+      - "How does the residential component partially insulate the property?"
+      - "What proactive steps could the owner take to protect value?"
+      - "Do you believe other teams in the class will arrive at the same valuation as you? Why or why not?"
+    private_info:
+      group1: |
+
+        ANALYST NOTE: Your team's research indicates the
+        competing grocery chain has a pattern of significant
+        construction delays — their last three projects opened
+        12–18 months behind schedule. Local brokers believe
+        GreenMart will retain most of its customer base during
+        this window.
+
+        ➤ ADJUST YOUR MODEL: Use Forecast Gross Sales of
+          $9,000,000 (instead of $8,500,000).
+          All other Round 2 assumptions unchanged.
+      group2: |
+
+        ANALYST NOTE: Your leasing team has learned that
+        several apartment tenants plan to vacate when their
+        leases expire, citing anticipated construction noise
+        from the new development. The property manager expects
+        vacancy to exceed the market consensus.
+
+        ➤ ADJUST YOUR MODEL: Use Apartment Vacancy Rate of
+          15.0% (instead of 10.0%).
+          Note: check whether occupancy still clears the
+          80% co-tenancy threshold.
+          All other Round 2 assumptions unchanged.
+      group3: |
+
+        ANALYST NOTE: Through an industry contact, your team
+        has learned the competing developer's financing fell
+        through last week. They are scrambling for a new lender
+        and there is a meaningful probability the project stalls
+        or is cancelled entirely. Without the competitive
+        threat, risk should not have increased.
+
+        ➤ ADJUST YOUR MODEL: Use an Exit Cap Rate of 7.0%
+          (unchanged from Round 1, instead of 7.5%).
+          All other Round 2 assumptions unchanged.
+      group4: |
+
+        ANALYST NOTE: Your team has obtained intelligence that
+        GreenMart is in active negotiations for a lease renewal
+        at a higher rent. Responding to the competitive threat,
+        they want exclusivity protections in exchange for a
+        premium above their current rate.
+
+        ➤ ADJUST YOUR MODEL: Use Anchor Base Rent of $22/SF
+          (instead of $20/SF).
+          All other Round 2 assumptions unchanged.
+      group5: |
+
+        ANALYST NOTE: A reliable source on the city planning
+        commission indicates the competing development site has
+        a newly discovered environmental issue — underground
+        storage tanks from a former gas station. Remediation
+        will delay the project by 2+ years. During that window,
+        GreenMart's sales should grow faster than the market
+        expects.
+
+        ➤ ADJUST YOUR MODEL: Use Annual Sales Growth of 2.0%
+          (instead of 1.0%).
+          All other Round 2 assumptions unchanged.
+      group6: |
+
+        ANALYST NOTE: Your banking contacts report that lenders
+        are becoming cautious about retail exposure in this
+        submarket. Two recent loan applications for nearby
+        retail properties were rejected, and institutional
+        buyers are demanding higher returns.
+
+        ➤ ADJUST YOUR MODEL: Use an Exit Cap Rate of 8.0%
+          (instead of 7.5%).
+          All other Round 2 assumptions unchanged.
+      group7: |
+
+        ANALYST NOTE: Your market research team has completed
+        a consumer survey showing that 30% of GreenMart
+        shoppers would switch to the new competitor. However,
+        foot traffic from the new center could actually
+        benefit the residential units — several prospective
+        tenants mentioned the additional retail as a draw.
+
+        ➤ ADJUST YOUR MODEL: Use Apartment Vacancy Rate of
+          7.0% (instead of 10.0%).
+          All other Round 2 assumptions unchanged.
+      group8: |
+
+        ANALYST NOTE: Your team has obtained a draft copy of
+        the competing center's tenant roster. It includes a
+        discount grocer, not a full-service chain — a weaker
+        competitive threat than the market assumes. GreenMart's
+        sales impact should be more modest.
+
+        ➤ ADJUST YOUR MODEL: Use Forecast Gross Sales of
+          $9,500,000 (instead of $8,500,000) and Annual
+          Sales Growth of 2.0% (instead of 1.0%).
+          All other Round 2 assumptions unchanged.
+
+  round3:
+    title: "🏭 Local Economic Shock"
+    subtitle: "Round 3 — Market Update"
+    description: "A major employer announces a plant closure."
+    info: |
+      MARKET UPDATE — Round 3: Local Economic Shock
+
+      MegaCorp Manufacturing (2,500 employees) announces
+      it will close its local plant within 90 days.
+
+      • GreenMart sales revised to $7,000,000
+        Sales now DECLINING at 2% per year
+      • Apartment vacancy surges to 25%
+        Occupancy = 75%
+      • Credit loss rises to 4.0%
+      • Exit cap rate widens to 8.5%
+      • Required rate of return rises to 10.0%
+
+      ⚠️ KEY INSIGHT: Apartment occupancy has dropped
+      BELOW 80%, triggering Brew & Bean's co-tenancy
+      clause. Their rent is reduced by 50% — even though
+      GreenMart is still operating.
+
+      Reminder: Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+      (no NOI growth assumed beyond Year 5).
+    questions:
+      - "What is the new NOI and DCF property value?"
+      - "Track the cumulative decline from the Base Case. What % of value has been lost?"
+      - "The co-tenancy clause was triggered by apartment vacancy, not the anchor leaving. Why would a coffee shop care about apartment occupancy?"
+      - "Decompose the value change: how much is from NOI decline vs. exit cap rate widening vs. the higher discount rate?"
+      - "Do you think every team in the class will value this property the same way? What might cause different teams to reach different conclusions?"
+    private_info:
+      group1: |
+
+        ANALYST NOTE: A contact at GreenMart's regional office
+        confides that headquarters is reviewing underperforming
+        locations for potential closure. Maple Creek is on the
+        watch list. Your team believes the sales outlook is
+        significantly worse than the market assumes.
+
+        ➤ ADJUST YOUR MODEL: Use Annual Sales Growth of -5.0%
+          (instead of -2.0%).
+          All other Round 3 assumptions unchanged.
+      group2: |
+
+        ANALYST NOTE: Your property management team reports
+        a local tech startup with 50 employees has signed
+        letters of intent for 4 apartment units, partially
+        offsetting the vacancy surge. Your team believes
+        actual vacancy will be lower than market consensus.
+
+        ➤ ADJUST YOUR MODEL: Use Apartment Vacancy Rate of
+          20.0% (instead of 25.0%).
+          Note: carefully check whether occupancy at 80%
+          triggers the co-tenancy clause (threshold is
+          BELOW 80%).
+          All other Round 3 assumptions unchanged.
+      group3: |
+
+        ANALYST NOTE: A municipal planning contact has shared
+        that the city is fast-tracking a tax increment financing
+        (TIF) district that includes Maple Creek. Property tax
+        abatements will significantly reduce operating costs
+        starting Year 1.
+
+        ➤ ADJUST YOUR MODEL: Use Total Operating Expenses of
+          $75,000 (instead of $95,000).
+          All other Round 3 assumptions unchanged.
+      group4: |
+
+        ANALYST NOTE: A competing investor group has toured
+        Maple Creek and is reportedly preparing a lowball bid.
+        Your contacts suggest institutional buyers now view
+        this submarket as significantly riskier than the
+        current 8.5% cap rate implies.
+
+        ➤ ADJUST YOUR MODEL: Use an Exit Cap Rate of 9.5%
+          (instead of 8.5%).
+          All other Round 3 assumptions unchanged.
+      group5: |
+
+        ANALYST NOTE: The state has announced a $20M economic
+        development grant to attract a replacement employer to
+        the MegaCorp site. Early reports indicate strong
+        interest from a logistics company. Consumer spending
+        is holding up better than feared.
+
+        ➤ ADJUST YOUR MODEL: Use Forecast Gross Sales of
+          $7,500,000 (instead of $7,000,000).
+          All other Round 3 assumptions unchanged.
+      group6: |
+
+        ANALYST NOTE: Your credit analysis team has reviewed
+        the remaining tenants and believes the property's
+        credit exposure is overstated. GreenMart has a strong
+        corporate guarantee, and residential tenants are mostly
+        on 12-month leases with security deposits.
+
+        ➤ ADJUST YOUR MODEL: Use Credit Loss of 3.0%
+          (instead of 4.0%).
+          All other Round 3 assumptions unchanged.
+      group7: |
+
+        ANALYST NOTE: Your team has learned that a regional
+        hospital system is expanding and plans to lease office
+        space near Maple Creek. The added daytime foot traffic
+        should support GreenMart's sales above the current
+        pessimistic forecast, and residential demand should
+        hold up better than the market expects.
+
+        ➤ ADJUST YOUR MODEL: Use Forecast Gross Sales of
+          $7,500,000 (instead of $7,000,000) and Apartment
+          Vacancy Rate of 20.0% (instead of 25.0%).
+          Note: carefully check whether occupancy at 80%
+          triggers the co-tenancy clause (threshold is
+          BELOW 80%).
+          All other Round 3 assumptions unchanged.
+      group8: |
+
+        ANALYST NOTE: Your contacts in local government report
+        that two additional employers are considering layoffs
+        in the next quarter. The economic shock may be deeper
+        and longer than the market currently anticipates.
+        Investors are pulling back from the submarket.
+
+        ➤ ADJUST YOUR MODEL: Use an Exit Cap Rate of 9.0%
+          (instead of 8.5%) and Apartment Vacancy Rate of
+          30.0% (instead of 25.0%).
+          All other Round 3 assumptions unchanged.
+
+  round4:
+    title: "⚠️ The Anchor Goes Dark"
+    subtitle: "Round 4 — Critical Event"
+    description: "GreenMart ceases operations. The store goes dark."
+    info: |
+      MARKET UPDATE — Round 4: The Anchor Goes Dark
+
+      GreenMart ceases operations immediately.
+      The store goes dark.
+
+      • GreenMart's 15,000 SF is VACANT
+        $0 rent, $0 sales, no percentage rents
+      • Set Anchor Operating to 0 (No)
+      • Apartment vacancy worsens to 30%
+      • Credit loss rises to 5%
+      • Exit cap rate widens to 10.0%
+      • Required rate of return rises to 12.0%
+      • Operating expenses remain unchanged —
+        the landlord still pays all costs
+
+      Reminder: Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+      (no NOI growth assumed beyond Year 5).
+    questions:
+      - "What is the Year 1 NOI? Is it positive or negative? What keeps the property afloat?"
+      - "A pure retail property would have produced a negative NOI. What does this teach about income diversification?"
+      - "Explain 'going dark' and the purpose of co-tenancy clauses."
+      - "As the owner, what are your strategic options?"
+
+  round5:
+    title: "🏦 Leverage & Tax Status"
+    subtitle: "Round 5 — Market Update"
+    description: "The property is re-leased. Analyze the impact of debt financing and tax status on investor returns."
+    info: |
+      MARKET UPDATE — Round 5: Leverage & Tax Status
+
+      The property has been re-leased and the economy
+      has modestly recovered.
+
+      • New anchor at $20/SF (same terms as original)
+        Co-tenancy no longer active
+      • Apartment vacancy: 8%
+      • Credit loss: 3%
+      • Exit cap rate: 7.5%
+      • Required rate of return: 9.0%
+      • All other assumptions revert to original
+
+      Reminder: Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+      (no NOI growth assumed beyond Year 5).
+
+      PART A — DEBT SERVICE ANALYSIS
+
+      DEBT TERMS
+      • LTV: 65%
+      • Interest Rate: 6.5% fixed
+      • Amortization: 30 years
+
+      Add below NOI in your pro forma:
+      Loan Amount (Value × LTV)
+      Debt Service (=PMT)
+      BTCF (NOI − Debt Service)
+      DSCR (NOI ÷ Debt Service)
+      Cash-on-Cash (BTCF ÷ Equity)
+
+      THEN: Rates rise to 8.0%.
+      Recalculate all debt metrics.
+
+      PART B — TAX STATUS COMPARISON
+
+      Two buyers are interested: a taxable corporation
+      and a tax-exempt pension fund.
+
+      • Building = 80% of value (land = 20%)
+      • Depreciation: straight-line over 39 years
+      • Taxable rate: 25%
+      • Year 1 interest ≈ Loan × Rate
+      • Pension fund rate: 0%
+      • Use 6.5% debt terms from Part A
+
+      Compute for each investor type:
+      Depreciation
+      Taxable Income (NOI − Depreciation − Interest)
+      Tax
+      After-Tax Cash Flow (ATCF)
+    questions:
+      - "What is the DCF property value? Does adding debt change the property's value?"
+      - "What is the DSCR at 6.5%? Is the property financeable (lenders typically require DSCR > 1.25x)?"
+      - "What is the cash-on-cash return vs. the unlevered 9.0% required return? Explain the difference."
+      - "When rates rise to 8.0%, what happens to DSCR and cash-on-cash? Why are rising rates particularly dangerous for leveraged real estate?"
+      - "What is the annual depreciation? What is the ATCF for the taxable investor vs. the pension fund?"
+      - "The pension fund earns ≈$23,000/year more in after-tax cash flow. How might this affect what each investor is willing to pay for the same property?"
+
+  round6:
+    title: "🔄 Reposition or Redevelop?"
+    subtitle: "Round 6 — Capstone"
+    description: "The market softens. Evaluate three strategic options."
+    info: |
+      MARKET UPDATE — Round 6: Reposition or Redevelop?
+
+      The market has softened further.
+      Evaluate three strategic options.
+
+      CURRENT DEGRADED STATE
+      • Anchor rent renegotiated to $14/SF
+      • Apartment vacancy 25% (co-tenancy active)
+      • Credit loss 5%, Exit cap rate 9.5%
+      • Sales $7.5M, 0% growth
+      • Required rate of return: 9.0%
+
+      OPTION A: Continue As-Is
+      Value = DCF valuation (same method as prior rounds)
+      Terminal Value = Year 5 NOI ÷ Exit Cap Rate
+      (no NOI growth assumed beyond Year 5).
+
+      OPTION B: Renovate & Reposition
+      $2M cost (Year 0). No income Year 1.
+      NOI $650K/yr from Year 2, 3% growth.
+      Terminal cap rate 6.5%.
+
+      OPTION C: Demolish & Build Luxury Mixed-Use
+      $6M cost (Year 0). No income Years 1–2.
+      NOI $850K/yr from Year 3, 3% growth.
+      Terminal cap rate 5.5%.
+
+      Discount rate: 9.0% for all NPV calculations.
+    questions:
+      - "What is the NPV of each option? Which maximizes value?"
+      - "Option C has highest terminal value but needs most capital. How should you weigh return vs. risk?"
+      - "What qualitative factors might favor one option over another, even if NPV disagrees?"
+      - "Write a one-paragraph investment memo recommending an option."
+
+scoring:
+  max_points_per_round: 100
+  method: "percentage"
+  penalty_per_percent: 5
+
+templates:
+  0: "Maple_Creek_Template.xlsx"
+  5: "Maple_Creek_R5_Leverage_Template.xlsx"
+  6: "Maple_Creek_R6_Reposition_Template.xlsx"
