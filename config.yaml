@@ -3,39 +3,31 @@ exercise_subtitle: "Dynamic Valuation Exercise"
 max_rounds: 6
 
 true_values:
-  0: 8641000
-  1: 9245000
-  2: 7972000
-  3: 5794000
-  4: 1850000
-  5: 8014000
-  6: 4567000
+  0: 8640593
+  1: 9244831
+  2: 7972289
+  3: 5794114
+  4: 1849558
+  5: 8014136
+  6: 4567147
 
 groups:
   - id: "group1"
-    name: "Team Alpha"
-    emoji: "🦅"
+    name: "Group 1: Brooklyn Lodgers"
   - id: "group2"
-    name: "Team Beta"
-    emoji: "🐺"
+    name: "Group 2: Tulaberry Plaza"
   - id: "group3"
-    name: "Team Gamma"
-    emoji: "🦁"
+    name: "Group 3: Edward Lundberg"
   - id: "group4"
-    name: "Team Delta"
-    emoji: "🦊"
+    name: "Group 4: Miami Price"
   - id: "group5"
-    name: "Team Epsilon"
-    emoji: "🐻"
+    name: "Group 5: Back to School"
   - id: "group6"
-    name: "Team Zeta"
-    emoji: "🦈"
+    name: "Group 6: Redeveloping Newcastle"
   - id: "group7"
-    name: "Team Eta"
-    emoji: "🦉"
+    name: "Group 7: Songy"
   - id: "group8"
-    name: "Team Theta"
-    emoji: "🐆"
+    name: "Group 8: Roofstock"
 
 initial_scenario: |
   THE PROPERTY — Maple Creek Mixed-Use Center
@@ -93,9 +85,6 @@ initial_scenario: |
   DCF valuation by discounting the NOI and terminal
   value at the required return.
 
-  Expected Year 1 NOI: ≈ $592,000
-  Property Value (DCF): ≈ $8,641,000
-
 initial_questions:
   - "What is the Year 1 NOI? What proportion comes from retail vs. residential income?"
   - "What is the indicated property value using DCF? How much of the value comes from the terminal value vs. operating cash flows?"
@@ -104,7 +93,7 @@ initial_questions:
 
 rounds:
   round1:
-    title: "📈 Percentage Rents Kick In"
+    title: "Percentage Rents Kick In"
     subtitle: "Round 1 — Market Update"
     description: "The local economy is booming."
     info: |
@@ -250,7 +239,7 @@ rounds:
           All other Round 2 assumptions unchanged.
 
   round3:
-    title: "🏭 Local Economic Shock"
+    title: "Local Economic Shock"
     subtitle: "Round 3 — Market Update"
     description: "A major employer announces a plant closure."
     info: |
@@ -267,7 +256,7 @@ rounds:
       • Exit cap rate widens to 8.5%
       • Required rate of return rises to 10.0%
 
-      ⚠️ KEY INSIGHT: Apartment occupancy has dropped
+      KEY INSIGHT: Apartment occupancy has dropped
       BELOW 80%, triggering Brew & Bean's co-tenancy
       clause. Their rent is reduced by 50% — even though
       GreenMart is still operating.
@@ -380,7 +369,7 @@ rounds:
           All other Round 3 assumptions unchanged.
 
   round4:
-    title: "⚠️ The Anchor Goes Dark"
+    title: "The Anchor Goes Dark"
     subtitle: "Round 4 — Critical Event"
     description: "GreenMart ceases operations. The store goes dark."
     info: |
@@ -408,7 +397,7 @@ rounds:
       - "As the owner, what are your strategic options?"
 
   round5:
-    title: "🏦 Leverage & Tax Status"
+    title: "Leverage & Tax Status"
     subtitle: "Round 5 — Market Update"
     description: "The property is re-leased. Analyze the impact of debt financing and tax status on investor returns."
     info: |
@@ -471,7 +460,7 @@ rounds:
       - "The pension fund earns ≈$23,000/year more in after-tax cash flow. How might this affect what each investor is willing to pay for the same property?"
 
   round6:
-    title: "🔄 Reposition or Redevelop?"
+    title: "Reposition or Redevelop?"
     subtitle: "Round 6 — Capstone"
     description: "The market softens. Evaluate three strategic options."
     info: |
